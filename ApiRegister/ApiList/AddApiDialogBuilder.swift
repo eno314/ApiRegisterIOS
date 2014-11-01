@@ -64,16 +64,14 @@ class AddApiDialogBuilder: NSObject {
         self.alertController.addAction(UIAlertAction(
             title: DIALOG_BUTTON_OK,
             style: UIAlertActionStyle.Default,
-            handler: { (action: UIAlertAction!) -> Void in
-                self.didClickAlertOkButton()
-            }
+            handler: didClickAlertOkButton
         ))
         
         return self.alertController;
     }
     
     // OKボタンをおした時の処理
-    private func didClickAlertOkButton() {
+    private func didClickAlertOkButton(action: UIAlertAction!) {
             
         var title = ""
         var url = ""

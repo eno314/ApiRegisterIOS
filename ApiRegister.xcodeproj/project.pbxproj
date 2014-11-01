@@ -14,6 +14,8 @@
 		9E938C231A04825A00A507D3 /* ApiRegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */; };
 		9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */; };
 		9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C341A0498AE00A507D3 /* ApiListViewController.swift */; };
+		9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C361A04AAAE00A507D3 /* ApiInfo.swift */; };
+		9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRegisterTests.swift; sourceTree = "<group>"; };
 		9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddApiDialogBuilder.swift; path = ApiList/AddApiDialogBuilder.swift; sourceTree = "<group>"; };
 		9E938C341A0498AE00A507D3 /* ApiListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListViewController.swift; path = ApiList/ApiListViewController.swift; sourceTree = "<group>"; };
+		9E938C361A04AAAE00A507D3 /* ApiInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiInfo.swift; path = ApiList/ApiInfo.swift; sourceTree = "<group>"; };
+		9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListStrage.swift; path = ApiList/ApiListStrage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 			children = (
 				9E938C341A0498AE00A507D3 /* ApiListViewController.swift */,
 				9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */,
+				9E938C361A04AAAE00A507D3 /* ApiInfo.swift */,
+				9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */,
 			);
 			name = ApiList;
 			sourceTree = "<group>";
@@ -225,6 +231,8 @@
 			files = (
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
+				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
+				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,
 				9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
