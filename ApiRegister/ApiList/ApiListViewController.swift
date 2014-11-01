@@ -25,7 +25,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return ApiListStrage.get().count;
     }
     
     // セルの内容を変更
@@ -35,7 +35,8 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
             let cell: UITableViewCell =
             UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
             
-            cell.textLabel.text = "Hogehoge"
+            cell.textLabel.text = ApiListStrage.get()[indexPath.row].title
+            
             return cell
     }
     
@@ -49,8 +50,8 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // API追加ダイアログからAPI情報を受け取った時のコールバック
     private func onReceiveApiInfo(title: String, url: String) {
-        println("title : " + title)
-        println("url : " + url)
+        ApiListStrage.add(url, title: title)
+        mTableView.reloadData()
     }
     
     // API追加ダイアログからAPI情報を受取るのが失敗した時のコールバック

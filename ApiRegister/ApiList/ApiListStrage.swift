@@ -26,7 +26,7 @@ class ApiListStrage: NSObject {
             apiList = saved
         }
         
-        apiList.append(url + "," + title)
+        apiList.append(title + "," + url)
         
         // 保存
         userDefaults.setObject(apiList, forKey: KEY)
@@ -49,10 +49,7 @@ class ApiListStrage: NSObject {
     private class func stringToApiInfo(apiInfoString: String) -> ApiInfo {
         
         let splited = split(apiInfoString, { $0 == ","})
-        
-        let apiInfo = ApiInfo()
-        apiInfo.url = splited[0]
-        apiInfo.title = splited[1]
+        let apiInfo = ApiInfo(title: splited[0], url: splited[1])
         
         return apiInfo
     }

@@ -11,8 +11,13 @@ import UIKit
 class ApiInfo: NSObject {
     
     // リストに表示するためのタイトル
-    var title: String?
+    let title: String
     
     // APIのURL
-    var url: String?
+    let url: String
+    
+    init(title: String, url: String) {
+        self.title = title
+        self.url = url
+    }
 }
