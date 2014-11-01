@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class EntryListViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class EntryListViewController: UIViewController {
     
     // APIリストの画面から遷移するためのコンストラクタ
     init(apiTitle: String, apiUrl: String) {
+        // super.initの前に書かないとエラーになる。。。
         mApiUrl = apiUrl
         
         super.init(nibName: "EntryListViewController", bundle: nil)
@@ -26,6 +28,19 @@ class EntryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Alamofire.request(.GET, mApiUrl).responseJSON(onResponse)
+    }
+    
+    private func onResponse(request: NSURLRequest,
+                            response: NSHTTPURLResponse?,
+                            json:AnyObject?,
+                            error: NSError?) {
+        println(json)
     }
 
     override func didReceiveMemoryWarning() {
