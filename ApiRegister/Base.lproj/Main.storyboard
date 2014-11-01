@@ -31,7 +31,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="7DB-cy-UJf" id="1DP-Bq-3B3"/>
+                        <outlet property="mTableView" destination="7DB-cy-UJf" id="iPL-1L-om2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
