@@ -42,16 +42,20 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     // APIをリストに追加するためのダイアログ生成
     private func buildAddApiDialog() -> UIAlertController {
         var builder: AddApiDialogBuilder = AddApiDialogBuilder()
-        builder.setOnInvalidInput { () -> Void in
-            println("入力がたりねーよ")
-        }
-        builder.setOnValidInput(onReceiveValiedApiInfo)
+        builder.setOnInvalidInput(onFailedReceiveApiInfo)
+        builder.setOnValidInput(onReceiveApiInfo)
         return builder.build()
     }
     
-    private func onReceiveValiedApiInfo(title: String, url: String) {
+    // API追加ダイアログからAPI情報を受け取った時のコールバック
+    private func onReceiveApiInfo(title: String, url: String) {
         println("title : " + title)
         println("url : " + url)
+    }
+    
+    // API追加ダイアログからAPI情報を受取るのが失敗した時のコールバック
+    private func onFailedReceiveApiInfo() {
+        println("入力がたりねーよ")
     }
     
     // 追加ボタンをクリックした時の処理
