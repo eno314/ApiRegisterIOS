@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C0C1A04825A00A507D3 /* AppDelegate.swift */; };
-		9E938C0F1A04825A00A507D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C0E1A04825A00A507D3 /* ViewController.swift */; };
 		9E938C121A04825A00A507D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C101A04825A00A507D3 /* Main.storyboard */; };
 		9E938C141A04825A00A507D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C131A04825A00A507D3 /* Images.xcassets */; };
 		9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C151A04825A00A507D3 /* LaunchScreen.xib */; };
 		9E938C231A04825A00A507D3 /* ApiRegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */; };
+		9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */; };
+		9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C341A0498AE00A507D3 /* ApiListViewController.swift */; };
+		9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C361A04AAAE00A507D3 /* ApiInfo.swift */; };
+		9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		9E938C071A04825A00A507D3 /* ApiRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E938C0B1A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E938C0C1A04825A00A507D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E938C0E1A04825A00A507D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E938C111A04825A00A507D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E938C131A04825A00A507D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E938C161A04825A00A507D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9E938C1C1A04825A00A507D3 /* ApiRegisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApiRegisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E938C211A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRegisterTests.swift; sourceTree = "<group>"; };
+		9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddApiDialogBuilder.swift; path = ApiList/AddApiDialogBuilder.swift; sourceTree = "<group>"; };
+		9E938C341A0498AE00A507D3 /* ApiListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListViewController.swift; path = ApiList/ApiListViewController.swift; sourceTree = "<group>"; };
+		9E938C361A04AAAE00A507D3 /* ApiInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiInfo.swift; path = ApiList/ApiInfo.swift; sourceTree = "<group>"; };
+		9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListStrage.swift; path = ApiList/ApiListStrage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,8 @@
 		9E938C091A04825A00A507D3 /* ApiRegister */ = {
 			isa = PBXGroup;
 			children = (
+				9E938C311A04891600A507D3 /* ApiList */,
 				9E938C0C1A04825A00A507D3 /* AppDelegate.swift */,
-				9E938C0E1A04825A00A507D3 /* ViewController.swift */,
 				9E938C101A04825A00A507D3 /* Main.storyboard */,
 				9E938C131A04825A00A507D3 /* Images.xcassets */,
 				9E938C151A04825A00A507D3 /* LaunchScreen.xib */,
@@ -110,6 +116,17 @@
 				9E938C211A04825A00A507D3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E938C311A04891600A507D3 /* ApiList */ = {
+			isa = PBXGroup;
+			children = (
+				9E938C341A0498AE00A507D3 /* ApiListViewController.swift */,
+				9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */,
+				9E938C361A04AAAE00A507D3 /* ApiInfo.swift */,
+				9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */,
+			);
+			name = ApiList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E938C0F1A04825A00A507D3 /* ViewController.swift in Sources */,
+				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
+				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
+				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
+				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,
 				9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
