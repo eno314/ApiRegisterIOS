@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let TITLE = "登録一覧"
+
 class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var mTableView: UITableView!
@@ -17,6 +19,8 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         mTableView.delegate = self
         mTableView.dataSource = self
+        
+        self.title = TITLE
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +46,8 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let entryListVC: EntryListViewController = EntryListViewController()
+        let apiInfo: ApiInfo = ApiListStrage.get()[indexPath.row]
+        let entryListVC = EntryListViewController(apiTitle: apiInfo.title, apiUrl: apiInfo.url)
         self.navigationController?.pushViewController(entryListVC, animated: true)
     }
     

@@ -10,8 +10,14 @@ import UIKit
 
 class EntryListViewController: UIViewController {
     
-    override init() {
+    let mApiUrl: String
+    
+    // APIリストの画面から遷移するためのコンストラクタ
+    init(apiTitle: String, apiUrl: String) {
+        mApiUrl = apiUrl
+        
         super.init(nibName: "EntryListViewController", bundle: nil)
+        self.title = apiTitle
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -20,13 +26,10 @@ class EntryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
