@@ -39,9 +39,23 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
     }
     
+    // APIをリストに追加するためのダイアログ生成
+    func buildAddApiDialog() -> UIAlertController {
+        var builder: AddApiDialogBuilder = AddApiDialogBuilder()
+        builder.setOnInvalidInput { () -> Void in
+            println("入力がたりねーよ")
+        }
+        builder.setOnValidInput { (title: String, url: String) -> Void in
+            println("title : " + title)
+            println("url : " + url)
+        }
+        
+        return builder.build()
+    }
+    
     // 追加ボタンをクリックした時の処理
     @IBAction func pressAddButton(sender: AnyObject) {
-        presentViewController(AddApiDialogBuilder().build(), animated: true, completion: nil);
+        presentViewController(buildAddApiDialog(), animated: true, completion: nil);
     }
 
     /*

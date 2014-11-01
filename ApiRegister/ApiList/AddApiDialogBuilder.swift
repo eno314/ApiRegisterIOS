@@ -19,71 +19,102 @@ private let TEXT_FIELD_TAG_URL = 1
 
 class AddApiDialogBuilder: NSObject {
     
-    func build() -> UIAlertController {
-        let alertController:UIAlertController = UIAlertController(
+    let alertController: UIAlertController
+    var onValidInput: ((String, String) -> Void)?
+    var onInValidInput:(() -> Void)?
+    
+    override init() {
+        self.alertController = UIAlertController(
             title: DIALOG_TITLE,
             message: DIALOG_MESSAGE,
             preferredStyle: UIAlertControllerStyle.Alert)
         
+        self.onValidInput = nil
+        self.onInValidInput = nil
+    }
+    
+    // 有効な文字が帰ってきたときのコールバックのセッター
+    func setOnValidInput(handler: (String, String) -> Void) {
+        self.onValidInput = handler
+    }
+    
+    // 無効なインプットだった場合のコールバックのセッター
+    func setOnInvalidInput(handler: () -> Void) {
+        self.onInValidInput = handler
+    }
+    
+    func build() -> UIAlertController {
         // タイトル入力枠
-        alertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
+        self.alertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
             text.tag = TEXT_FIELD_TAG_TITLE
             text.placeholder = TEXT_FIELD_PLACEHOLDER_TITLE
         })
         
         // URL入力枠
-        alertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
+        self.alertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
             text.tag = TEXT_FIELD_TAG_URL
             text.placeholder = TEXT_FIELD_PLACEHOLDER_URL
         })
         
-        alertController.addAction(createAlertActionCancel())
-        alertController.addAction(createAlertActionOK(alertController))
+        self.alertController.addAction(UIAlertAction(
+            title: DIALOG_BUTTON_CANCEL,
+            style: UIAlertActionStyle.Cancel,
+            handler: nil))
         
-        return alertController;
-    }
-    
-    // キャンセルボタンのアクション追加
-    func createAlertActionCancel() -> UIAlertAction {
-        return UIAlertAction(title: DIALOG_BUTTON_CANCEL, style: UIAlertActionStyle.Cancel, nil)
-    }
-    
-    // OKボタンのアクション追加
-    func createAlertActionOK(alert: UIAlertController) -> UIAlertAction {
-        return UIAlertAction(
+        self.alertController.addAction(UIAlertAction(
             title: DIALOG_BUTTON_OK,
             style: UIAlertActionStyle.Default,
-            handler:{(action:UIAlertAction!) -> Void in
-                self.didClickAlertOkButton(alert)
-        })
+            handler: { (action: UIAlertAction!) -> Void in
+                self.didClickAlertOkButton()
+            }
+        ))
+        
+        return self.alertController;
     }
     
     // OKボタンをおした時の処理
-    func didClickAlertOkButton(alert: UIAlertController) {
+    func didClickAlertOkButton() {
+            
         var title = ""
         var url = ""
         
-        let textFields:Array<UITextField>? =  alert.textFields as Array<UITextField>?
-        if textFields != nil {
-            for textField:UITextField in textFields! {
-                if textField.tag == TEXT_FIELD_TAG_TITLE {
-                    title = textField.text
-                } else if textField.tag == TEXT_FIELD_TAG_URL {
-                    url = textField.text
-                }
+        let textFields:Array<UITextField>? =  self.alertController.textFields as Array<UITextField>?
+        
+        if textFields == nil {
+            callOnInValidInput()
+            return
+        }
+        
+        for textField:UITextField in textFields! {
+            if textField.tag == TEXT_FIELD_TAG_TITLE {
+                title = textField.text
+            } else if textField.tag == TEXT_FIELD_TAG_URL {
+                url = textField.text
             }
         }
         
         if title.isEmpty {
+            callOnInValidInput()
             return
         }
         
         if url.isEmpty{
+            callOnInValidInput()
             return
         }
         
-        // ApiListStrage.add(url, title: title)
-        
-        // self.tableView.reloadData()
+        callOnValidInput(title, url: url)
+    }
+    
+    func callOnValidInput(title: String, url: String) {
+        if self.onValidInput != nil {
+            self.onValidInput!(title, url);
+        }
+    }
+    
+    func callOnInValidInput() {
+        if self.onInValidInput != nil {
+            self.onInValidInput!()
+        }
     }
 }
