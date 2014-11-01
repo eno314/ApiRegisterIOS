@@ -40,6 +40,12 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
     }
     
+    // セルタップ時
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let entryListVC: EntryListViewController = EntryListViewController()
+        self.navigationController?.pushViewController(entryListVC, animated: true)
+    }
+    
     // APIをリストに追加するためのダイアログ生成
     private func buildAddApiDialog() -> UIAlertController {
         var builder: AddApiDialogBuilder = AddApiDialogBuilder()

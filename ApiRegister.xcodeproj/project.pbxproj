@@ -18,6 +18,8 @@
 		9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */; };
 		9E938C6D1A0500E200A507D3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E938C6A1A0500A100A507D3 /* Alamofire.framework */; };
 		9E938C6F1A05010700A507D3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E938C6A1A0500A100A507D3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E938C791A05083A00A507D3 /* EntryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C771A05083A00A507D3 /* EntryListViewController.swift */; };
+		9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C781A05083A00A507D3 /* EntryListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		9E938C361A04AAAE00A507D3 /* ApiInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiInfo.swift; path = ApiList/ApiInfo.swift; sourceTree = "<group>"; };
 		9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListStrage.swift; path = ApiList/ApiListStrage.swift; sourceTree = "<group>"; };
 		9E938C641A0500A100A507D3 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		9E938C771A05083A00A507D3 /* EntryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListViewController.swift; path = EntryList/EntryListViewController.swift; sourceTree = "<group>"; };
+		9E938C781A05083A00A507D3 /* EntryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListViewController.xib; path = EntryList/EntryListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		9E938C091A04825A00A507D3 /* ApiRegister */ = {
 			isa = PBXGroup;
 			children = (
+				9E938C721A05058E00A507D3 /* EntryList */,
 				9E938C311A04891600A507D3 /* ApiList */,
 				9E938C0C1A04825A00A507D3 /* AppDelegate.swift */,
 				9E938C101A04825A00A507D3 /* Main.storyboard */,
@@ -168,6 +173,15 @@
 				9E938C6C1A0500A100A507D3 /* AlamofireTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9E938C721A05058E00A507D3 /* EntryList */ = {
+			isa = PBXGroup;
+			children = (
+				9E938C771A05083A00A507D3 /* EntryListViewController.swift */,
+				9E938C781A05083A00A507D3 /* EntryListViewController.xib */,
+			);
+			name = EntryList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E938C121A04825A00A507D3 /* Main.storyboard in Resources */,
+				9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */,
 				9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */,
 				9E938C141A04825A00A507D3 /* Images.xcassets in Resources */,
 			);
@@ -299,6 +314,7 @@
 				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
 				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,
 				9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */,
+				9E938C791A05083A00A507D3 /* EntryListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
