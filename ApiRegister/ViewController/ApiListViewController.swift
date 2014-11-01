@@ -39,6 +39,10 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
             return cell
     }
     
+    // 追加ボタンをクリックした時の処理
+    @IBAction func pressAddButton(sender: AnyObject) {
+        presentViewController(AddApiDialogBuilder().build(), animated: true, completion: nil);
+    }
 
     /*
     // MARK: - Navigation

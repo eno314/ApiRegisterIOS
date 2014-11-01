@@ -13,6 +13,7 @@
 		9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C151A04825A00A507D3 /* LaunchScreen.xib */; };
 		9E938C231A04825A00A507D3 /* ApiRegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */; };
 		9E938C301A04874200A507D3 /* ApiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C2F1A04874200A507D3 /* ApiListViewController.swift */; };
+		9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9E938C211A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRegisterTests.swift; sourceTree = "<group>"; };
 		9E938C2F1A04874200A507D3 /* ApiListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListViewController.swift; path = ViewController/ApiListViewController.swift; sourceTree = "<group>"; };
+		9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddApiDialogBuilder.swift; path = ApiList/AddApiDialogBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		9E938C091A04825A00A507D3 /* ApiRegister */ = {
 			isa = PBXGroup;
 			children = (
+				9E938C311A04891600A507D3 /* ApiList */,
 				9E938C2E1A04871500A507D3 /* ViewController */,
 				9E938C0C1A04825A00A507D3 /* AppDelegate.swift */,
 				9E938C101A04825A00A507D3 /* Main.storyboard */,
@@ -118,6 +121,14 @@
 				9E938C2F1A04874200A507D3 /* ApiListViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		9E938C311A04891600A507D3 /* ApiList */ = {
+			isa = PBXGroup;
+			children = (
+				9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */,
+			);
+			name = ApiList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
 				9E938C301A04874200A507D3 /* ApiListViewController.swift in Sources */,
 				9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */,
 			);

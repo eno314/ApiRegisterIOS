@@ -24,7 +24,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="UbK-qd-ghQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FZZ-4a-0O1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="FZZ-4a-0O1">
+                            <connections>
+                                <action selector="pressAddButton:" destination="vXZ-lx-hvc" id="dNJ-5W-ZcM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7DB-cy-UJf" id="1DP-Bq-3B3"/>
