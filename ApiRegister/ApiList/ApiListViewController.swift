@@ -10,13 +10,13 @@ import UIKit
 
 class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var mTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        mTableView.delegate = self
+        mTableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {

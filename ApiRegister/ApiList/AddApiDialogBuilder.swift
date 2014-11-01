@@ -19,55 +19,56 @@ private let TEXT_FIELD_TAG_URL = 1
 
 class AddApiDialogBuilder: NSObject {
     
-    let alertController: UIAlertController
-    var onValidInput: ((String, String) -> Void)?
-    var onInValidInput:(() -> Void)?
+    private let mAlertController: UIAlertController
+    
+    private var mOnValidInput: ((String, String) -> Void)?
+    private var mOnInValidInput:(() -> Void)?
     
     override init() {
-        self.alertController = UIAlertController(
+        mAlertController = UIAlertController(
             title: DIALOG_TITLE,
             message: DIALOG_MESSAGE,
             preferredStyle: UIAlertControllerStyle.Alert)
         
-        self.onValidInput = nil
-        self.onInValidInput = nil
+        mOnValidInput = nil
+        mOnInValidInput = nil
     }
     
     // 有効な文字が帰ってきたときのコールバックのセッター
     func setOnValidInput(handler: (String, String) -> Void) {
-        self.onValidInput = handler
+        mOnValidInput = handler
     }
     
     // 無効なインプットだった場合のコールバックのセッター
     func setOnInvalidInput(handler: () -> Void) {
-        self.onInValidInput = handler
+        mOnInValidInput = handler
     }
     
     func build() -> UIAlertController {
         // タイトル入力枠
-        self.alertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
+        mAlertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
             text.tag = TEXT_FIELD_TAG_TITLE
             text.placeholder = TEXT_FIELD_PLACEHOLDER_TITLE
         })
         
         // URL入力枠
-        self.alertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
+        mAlertController.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
             text.tag = TEXT_FIELD_TAG_URL
             text.placeholder = TEXT_FIELD_PLACEHOLDER_URL
         })
         
-        self.alertController.addAction(UIAlertAction(
+        mAlertController.addAction(UIAlertAction(
             title: DIALOG_BUTTON_CANCEL,
             style: UIAlertActionStyle.Cancel,
             handler: nil))
         
-        self.alertController.addAction(UIAlertAction(
+        mAlertController.addAction(UIAlertAction(
             title: DIALOG_BUTTON_OK,
             style: UIAlertActionStyle.Default,
             handler: didClickAlertOkButton
         ))
         
-        return self.alertController;
+        return mAlertController;
     }
     
     // OKボタンをおした時の処理
@@ -76,7 +77,7 @@ class AddApiDialogBuilder: NSObject {
         var title = ""
         var url = ""
         
-        let textFields:Array<UITextField>? =  self.alertController.textFields as Array<UITextField>?
+        let textFields:Array<UITextField>? =  mAlertController.textFields as Array<UITextField>?
         
         if textFields == nil {
             callOnInValidInput()
@@ -105,14 +106,14 @@ class AddApiDialogBuilder: NSObject {
     }
     
     private func callOnValidInput(title: String, url: String) {
-        if self.onValidInput != nil {
-            self.onValidInput!(title, url);
+        if mOnValidInput != nil {
+            mOnValidInput!(title, url);
         }
     }
     
     private func callOnInValidInput() {
-        if self.onInValidInput != nil {
-            self.onInValidInput!()
+        if mOnInValidInput != nil {
+            mOnInValidInput!()
         }
     }
 }
