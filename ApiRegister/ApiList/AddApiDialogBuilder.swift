@@ -73,7 +73,7 @@ class AddApiDialogBuilder: NSObject {
     }
     
     // OKボタンをおした時の処理
-    func didClickAlertOkButton() {
+    private func didClickAlertOkButton() {
             
         var title = ""
         var url = ""
@@ -106,13 +106,13 @@ class AddApiDialogBuilder: NSObject {
         callOnValidInput(title, url: url)
     }
     
-    func callOnValidInput(title: String, url: String) {
+    private func callOnValidInput(title: String, url: String) {
         if self.onValidInput != nil {
             self.onValidInput!(title, url);
         }
     }
     
-    func callOnInValidInput() {
+    private func callOnInValidInput() {
         if self.onInValidInput != nil {
             self.onInValidInput!()
         }
