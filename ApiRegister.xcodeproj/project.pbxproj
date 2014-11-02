@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88C7A91A05C9830072D813 /* EntryListParser.swift */; };
 		9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C0C1A04825A00A507D3 /* AppDelegate.swift */; };
 		9E938C121A04825A00A507D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C101A04825A00A507D3 /* Main.storyboard */; };
 		9E938C141A04825A00A507D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C131A04825A00A507D3 /* Images.xcassets */; };
@@ -62,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9E88C7A91A05C9830072D813 /* EntryListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListParser.swift; path = EntryList/EntryListParser.swift; sourceTree = "<group>"; };
 		9E938C071A04825A00A507D3 /* ApiRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E938C0B1A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E938C0C1A04825A00A507D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				9E938C781A05083A00A507D3 /* EntryListViewController.xib */,
 				9E938C7B1A051FC500A507D3 /* Entry.swift */,
 				9E938C7D1A05213800A507D3 /* EntryListRequest.swift */,
+				9E88C7A91A05C9830072D813 /* EntryListParser.swift */,
 			);
 			name = EntryList;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */,
 				9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */,
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
+				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
 				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
 				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,

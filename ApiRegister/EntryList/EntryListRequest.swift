@@ -17,7 +17,7 @@ class EntryListRequest: NSObject {
     private let mOnReceiveEntryList: ([Entry] -> Void)?
     
     // エラー時のコールバック
-    private let mOnRequestFaild: (NSError -> Void)?
+    private let mOnRequestFaild: (() -> Void)?
     
     // Builder専用のコンストラクタ
     private init(builder: EntryListRequest.Builder) {
@@ -30,11 +30,13 @@ class EntryListRequest: NSObject {
         Alamofire.request(.GET, mRequestUrl).responseJSON(onResponse)
     }
     
-    private func onResponse(request: NSURLRequest,
-                            response: NSHTTPURLResponse?,
-                            json:AnyObject?,
-                            error: NSError?) {
-            println(json)
+    private func onResponse(request: NSURLRequest, response: NSHTTPURLResponse?, json:AnyObject?, error: NSError?) {
+        
+        if json == nil {
+            return
+        }
+        
+        EntryListParser().parse(json!)
     }
     
     class Builder: NSObject {
@@ -46,7 +48,7 @@ class EntryListRequest: NSObject {
         private var mOnReceiveEntryList: ([Entry] -> Void)?
         
         // エラー時のコールバック
-        private var mOnRequestFaild: (NSError -> Void)?
+        private var mOnRequestFaild: (() -> Void)?
         
         init(url: String) {
             mRequestUrl = url
@@ -57,7 +59,7 @@ class EntryListRequest: NSObject {
             return self
         }
         
-        func setOnRequestFaild(onRequestFailed: NSError -> Void) -> Builder {
+        func setOnRequestFaild(onRequestFailed: () -> Void) -> Builder {
             mOnRequestFaild = onRequestFailed
             return self
         }
