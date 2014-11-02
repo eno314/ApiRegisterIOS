@@ -21,6 +21,7 @@
 		9E938C791A05083A00A507D3 /* EntryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C771A05083A00A507D3 /* EntryListViewController.swift */; };
 		9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C781A05083A00A507D3 /* EntryListViewController.xib */; };
 		9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7B1A051FC500A507D3 /* Entry.swift */; };
+		9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7D1A05213800A507D3 /* EntryListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		9E938C771A05083A00A507D3 /* EntryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListViewController.swift; path = EntryList/EntryListViewController.swift; sourceTree = "<group>"; };
 		9E938C781A05083A00A507D3 /* EntryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListViewController.xib; path = EntryList/EntryListViewController.xib; sourceTree = "<group>"; };
 		9E938C7B1A051FC500A507D3 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = EntryList/Entry.swift; sourceTree = "<group>"; };
+		9E938C7D1A05213800A507D3 /* EntryListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListRequest.swift; path = EntryList/EntryListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				9E938C771A05083A00A507D3 /* EntryListViewController.swift */,
 				9E938C781A05083A00A507D3 /* EntryListViewController.xib */,
 				9E938C7B1A051FC500A507D3 /* Entry.swift */,
+				9E938C7D1A05213800A507D3 /* EntryListRequest.swift */,
 			);
 			name = EntryList;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */,
 				9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */,
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
