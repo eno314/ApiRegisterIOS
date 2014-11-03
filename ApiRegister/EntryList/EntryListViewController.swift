@@ -63,6 +63,7 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
                 var error: NSError?
                 var imageData: NSData? = NSData(contentsOfURL: imageURL!, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &error)
                 if error == nil {
+                    cell.imageView.contentMode = UIViewContentMode.ScaleAspectFit
                     cell.imageView.image = UIImage(data: imageData!)
                 } else {
                     println(error)
@@ -71,6 +72,7 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         cell.textLabel.text = mEntryList[indexPath.row].title
+        cell.textLabel.numberOfLines = 0
         return cell
     }
     
