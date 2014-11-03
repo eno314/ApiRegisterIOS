@@ -23,6 +23,7 @@
 		9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C781A05083A00A507D3 /* EntryListViewController.xib */; };
 		9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7B1A051FC500A507D3 /* Entry.swift */; };
 		9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7D1A05213800A507D3 /* EntryListRequest.swift */; };
+		9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		9E938C781A05083A00A507D3 /* EntryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListViewController.xib; path = EntryList/EntryListViewController.xib; sourceTree = "<group>"; };
 		9E938C7B1A051FC500A507D3 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = EntryList/Entry.swift; sourceTree = "<group>"; };
 		9E938C7D1A05213800A507D3 /* EntryListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListRequest.swift; path = EntryList/EntryListRequest.swift; sourceTree = "<group>"; };
+		9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkImageVIew.swift; path = Util/NetworkImageVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E88C7AD1A07310C0072D813 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		9E938BFE1A04825A00A507D3 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		9E938C091A04825A00A507D3 /* ApiRegister */ = {
 			isa = PBXGroup;
 			children = (
+				9E88C7AD1A07310C0072D813 /* Util */,
 				9E938C721A05058E00A507D3 /* EntryList */,
 				9E938C311A04891600A507D3 /* ApiList */,
 				9E938C0C1A04825A00A507D3 /* AppDelegate.swift */,
@@ -321,6 +332,7 @@
 				9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */,
 				9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */,
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
+				9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */,
 				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
 				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,

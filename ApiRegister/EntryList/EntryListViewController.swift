@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class EntryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -50,9 +51,25 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // セルの内容を変更
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(
-            style: UITableViewCellStyle.Subtitle,
-            reuseIdentifier: "Cell")
+        let entry: Entry = mEntryList[indexPath.row]
+        
+        var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        
+        if entry.image != nil {
+            // TODO 非同期化
+            let imageURL: NSURL? = NSURL(string: entry.image!)
+            
+            if imageURL != nil {
+                var error: NSError?
+                var imageData: NSData? = NSData(contentsOfURL: imageURL!, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &error)
+                if error == nil {
+                    cell.imageView.image = UIImage(data: imageData!)
+                } else {
+                    println(error)
+                }
+            }
+        }
+        
         cell.textLabel.text = mEntryList[indexPath.row].title
         return cell
     }
