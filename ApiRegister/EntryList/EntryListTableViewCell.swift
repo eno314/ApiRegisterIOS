@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class EntryListTableViewCell: UITableViewCell {
 
@@ -29,18 +30,10 @@ class EntryListTableViewCell: UITableViewCell {
         
     }
     
-    func setImageUrl(imageUrlString: String) {
-        // TODO 非同期化
-        let imageURL: NSURL? = NSURL(string: imageUrlString)
-        
-        if imageURL != nil {
-            var error: NSError?
-            var imageData: NSData? = NSData(contentsOfURL: imageURL!, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &error)
+    func setImageUrl(imageUrl: String) {
+        Alamofire.request(.GET, imageUrl).response { (request, response, data, error) -> Void in
             if error == nil {
-                entryImageView.contentMode = UIViewContentMode.ScaleAspectFit
-                entryImageView.image = UIImage(data: imageData!)
-            } else {
-                println(error)
+                self.entryImageView.image = UIImage(data: data as NSData)
             }
         }
     }
