@@ -8,11 +8,16 @@
 
 import UIKit
 
+private let ELEMENT_ENTRIES = "entries"
+private let ELEMENT_TITLE = "title"
+private let ELEMENT_URL = "url"
+private let ELEMENT_IMAGE = "image"
+
 class EntryListParser: NSObject {
    
     func parse(json: AnyObject) -> Array<Entry>? {
         if let result = json as? Dictionary<String, Array<Dictionary<String, String>>> {
-            return parseRoot(result["entries"])
+            return parseRoot(result[ELEMENT_ENTRIES])
         } else {
             return nil
         }
@@ -41,16 +46,16 @@ class EntryListParser: NSObject {
     private func parseEntry(entryDictionary: Dictionary<String, String>) -> Entry {
         let entry: Entry = Entry()
         
-        if entryDictionary["title"] != nil {
-            entry.title = entryDictionary["title"]
+        if entryDictionary[ELEMENT_TITLE] != nil {
+            entry.title = entryDictionary[ELEMENT_TITLE]
         }
         
-        if entryDictionary["url"] != nil {
-            entry.url = entryDictionary["url"]
+        if entryDictionary[ELEMENT_URL] != nil {
+            entry.url = entryDictionary[ELEMENT_URL]
         }
         
-        if entryDictionary["image"] != nil {
-            entry.image = entryDictionary["image"]
+        if entryDictionary[ELEMENT_IMAGE] != nil {
+            entry.image = entryDictionary[ELEMENT_IMAGE]
         }
         
         return entry
