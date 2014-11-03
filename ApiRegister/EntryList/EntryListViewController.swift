@@ -9,6 +9,12 @@
 import UIKit
 import Alamofire
 
+private let CELL_ID_DEFAULT = "CELL_DEFAULT"
+private let CELL_ID_IMAGE = "CELL_IMAGE"
+private let IMAGE_CELL_HEIGHT: CGFloat = 100
+private let DEFAULT_CELL_HEIGHT: CGFloat = 90
+private let DEFAUTL_CELL_TEXT_LINE = 3
+
 class EntryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var mTableView: UITableView!
@@ -37,6 +43,8 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
         mTableView.delegate = self
         mTableView.dataSource = self
         
+        mTableView.registerNib(UINib(nibName: "EntryListTableViewCell", bundle: nil), forCellReuseIdentifier: CELL_ID_IMAGE)
+        
         request()
     }
 
@@ -53,32 +61,25 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let entry: Entry = mEntryList[indexPath.row]
         
-        var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        
-        if entry.image != nil {
-            // TODO 非同期化
-            let imageURL: NSURL? = NSURL(string: entry.image!)
-            
-            if imageURL != nil {
-                var error: NSError?
-                var imageData: NSData? = NSData(contentsOfURL: imageURL!, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &error)
-                if error == nil {
-                    cell.imageView.contentMode = UIViewContentMode.ScaleAspectFit
-                    cell.imageView.image = UIImage(data: imageData!)
-                } else {
-                    println(error)
-                }
-            }
+        if entry.image == nil {
+            return createTableViewCell(entry)
+        } else {
+            return createTableViewCellWithImage(entry)
         }
-        
-        cell.textLabel.text = mEntryList[indexPath.row].title
-        cell.textLabel.numberOfLines = 0
-        return cell
     }
     
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println(mEntryList[indexPath.row].url)
+    }
+    
+    // セルの高さ
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if hasImage(indexPath.row) {
+            return IMAGE_CELL_HEIGHT
+        }
+        
+        return DEFAULT_CELL_HEIGHT
     }
     
     // APIリクエスト
@@ -98,5 +99,30 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     // APIリクエストに失敗した時のコールバック実装
     private func onRequestFaild() {
         println("request failed...")
+    }
+    
+    // 画像なしのセル生成
+    private func createTableViewCell(entry: Entry) -> UITableViewCell {
+        var cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CELL_ID_DEFAULT)
+        cell.textLabel.text = entry.title
+        cell.textLabel.numberOfLines = DEFAUTL_CELL_TEXT_LINE
+        return cell
+    }
+    
+    // 画像ありのセル生成
+    private func createTableViewCellWithImage(entry: Entry) -> UITableViewCell {
+        var cell: EntryListTableViewCell = mTableView.dequeueReusableCellWithIdentifier(CELL_ID_IMAGE) as EntryListTableViewCell
+        cell.setTitle(entry.title!)
+        cell.setImageUrl(entry.image!)
+        
+        return cell
+    }
+    
+    private func hasImage(index: Int) -> Bool {
+        if mEntryList[index].image == nil {
+            return false
+        }
+        
+        return true
     }
 }

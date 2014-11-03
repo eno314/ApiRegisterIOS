@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3EB10A1A077B3B00DB69C9 /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */; };
+		9E3EB10E1A077B7A00DB69C9 /* EntryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */; };
 		9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88C7A91A05C9830072D813 /* EntryListParser.swift */; };
 		9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C0C1A04825A00A507D3 /* AppDelegate.swift */; };
 		9E938C121A04825A00A507D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C101A04825A00A507D3 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListTableViewCell.swift; path = EntryList/EntryListTableViewCell.swift; sourceTree = "<group>"; };
+		9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListTableViewCell.xib; path = EntryList/EntryListTableViewCell.xib; sourceTree = "<group>"; };
 		9E88C7A91A05C9830072D813 /* EntryListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListParser.swift; path = EntryList/EntryListParser.swift; sourceTree = "<group>"; };
 		9E938C071A04825A00A507D3 /* ApiRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E938C0B1A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				9E938C7B1A051FC500A507D3 /* Entry.swift */,
 				9E938C7D1A05213800A507D3 /* EntryListRequest.swift */,
 				9E88C7A91A05C9830072D813 /* EntryListParser.swift */,
+				9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */,
+				9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */,
 			);
 			name = EntryList;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E938C121A04825A00A507D3 /* Main.storyboard in Resources */,
+				9E3EB10E1A077B7A00DB69C9 /* EntryListTableViewCell.xib in Resources */,
 				9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */,
 				9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */,
 				9E938C141A04825A00A507D3 /* Images.xcassets in Resources */,
@@ -330,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */,
+				9E3EB10A1A077B3B00DB69C9 /* EntryListTableViewCell.swift in Sources */,
 				9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */,
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
 				9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */,
