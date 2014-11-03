@@ -8,14 +8,19 @@
 
 import UIKit
 
-class EntryListViewController: UIViewController {
+class EntryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let mApiUrl: String
+    @IBOutlet var mTableView: UITableView!
+    
+    private let mApiUrl: String
+    
+    private var mEntryList: Array<Entry>
     
     // APIリストの画面から遷移するためのコンストラクタ
     init(apiTitle: String, apiUrl: String) {
         // super.initの前に書かないとエラーになる。。。
         mApiUrl = apiUrl
+        mEntryList = []
         
         super.init(nibName: "EntryListViewController", bundle: nil)
         self.title = apiTitle
@@ -28,32 +33,51 @@ class EntryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var builder: EntryListRequest.Builder = EntryListRequest.Builder(url: mApiUrl)
-        builder.setOnReceiveEntryList(onReceiveEntryList)
-        builder.setOnRequestFaild(onRequestFaild)
-        builder.build().execute()
+        mTableView.delegate = self
+        mTableView.dataSource = self
+        
+        request()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    private func onReceiveEntryList(entryList: Array<Entry>) {
-        println(entryList)
+    // セルの行数
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mEntryList.count;
     }
     
+    // セルの内容を変更
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(
+            style: UITableViewCellStyle.Subtitle,
+            reuseIdentifier: "Cell")
+        cell.textLabel.text = mEntryList[indexPath.row].title
+        return cell
+    }
+    
+    // セルタップ時
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println(mEntryList[indexPath.row].url)
+    }
+    
+    // APIリクエスト
+    private func request() {
+        let builder: EntryListRequest.Builder = EntryListRequest.Builder(url: mApiUrl)
+        builder.setOnReceiveEntryList(onReceiveEntryList)
+        builder.setOnRequestFaild(onRequestFaild)
+        builder.build().execute()
+    }
+    
+    // APIのパース結果を受け取った時のコールバック実装
+    private func onReceiveEntryList(entryList: Array<Entry>) {
+        mEntryList = entryList
+        mTableView.reloadData()
+    }
+    
+    // APIリクエストに失敗した時のコールバック実装
     private func onRequestFaild() {
         println("request failed...")
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
