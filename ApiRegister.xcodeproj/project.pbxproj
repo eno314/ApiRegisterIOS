@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3EB10A1A077B3B00DB69C9 /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */; };
+		9E3EB10E1A077B7A00DB69C9 /* EntryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */; };
+		9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88C7A91A05C9830072D813 /* EntryListParser.swift */; };
 		9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C0C1A04825A00A507D3 /* AppDelegate.swift */; };
 		9E938C121A04825A00A507D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C101A04825A00A507D3 /* Main.storyboard */; };
 		9E938C141A04825A00A507D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C131A04825A00A507D3 /* Images.xcassets */; };
@@ -20,6 +23,9 @@
 		9E938C6F1A05010700A507D3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E938C6A1A0500A100A507D3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E938C791A05083A00A507D3 /* EntryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C771A05083A00A507D3 /* EntryListViewController.swift */; };
 		9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C781A05083A00A507D3 /* EntryListViewController.xib */; };
+		9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7B1A051FC500A507D3 /* Entry.swift */; };
+		9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7D1A05213800A507D3 /* EntryListRequest.swift */; };
+		9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListTableViewCell.swift; path = EntryList/EntryListTableViewCell.swift; sourceTree = "<group>"; };
+		9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListTableViewCell.xib; path = EntryList/EntryListTableViewCell.xib; sourceTree = "<group>"; };
+		9E88C7A91A05C9830072D813 /* EntryListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListParser.swift; path = EntryList/EntryListParser.swift; sourceTree = "<group>"; };
 		9E938C071A04825A00A507D3 /* ApiRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E938C0B1A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E938C0C1A04825A00A507D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +85,9 @@
 		9E938C641A0500A100A507D3 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		9E938C771A05083A00A507D3 /* EntryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListViewController.swift; path = EntryList/EntryListViewController.swift; sourceTree = "<group>"; };
 		9E938C781A05083A00A507D3 /* EntryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListViewController.xib; path = EntryList/EntryListViewController.xib; sourceTree = "<group>"; };
+		9E938C7B1A051FC500A507D3 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = EntryList/Entry.swift; sourceTree = "<group>"; };
+		9E938C7D1A05213800A507D3 /* EntryListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListRequest.swift; path = EntryList/EntryListRequest.swift; sourceTree = "<group>"; };
+		9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkImageVIew.swift; path = Util/NetworkImageVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E88C7AD1A07310C0072D813 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		9E938BFE1A04825A00A507D3 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +139,7 @@
 		9E938C091A04825A00A507D3 /* ApiRegister */ = {
 			isa = PBXGroup;
 			children = (
+				9E88C7AD1A07310C0072D813 /* Util */,
 				9E938C721A05058E00A507D3 /* EntryList */,
 				9E938C311A04891600A507D3 /* ApiList */,
 				9E938C0C1A04825A00A507D3 /* AppDelegate.swift */,
@@ -180,6 +201,11 @@
 			children = (
 				9E938C771A05083A00A507D3 /* EntryListViewController.swift */,
 				9E938C781A05083A00A507D3 /* EntryListViewController.xib */,
+				9E938C7B1A051FC500A507D3 /* Entry.swift */,
+				9E938C7D1A05213800A507D3 /* EntryListRequest.swift */,
+				9E88C7A91A05C9830072D813 /* EntryListParser.swift */,
+				9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */,
+				9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */,
 			);
 			name = EntryList;
 			sourceTree = "<group>";
@@ -289,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E938C121A04825A00A507D3 /* Main.storyboard in Resources */,
+				9E3EB10E1A077B7A00DB69C9 /* EntryListTableViewCell.xib in Resources */,
 				9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */,
 				9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */,
 				9E938C141A04825A00A507D3 /* Images.xcassets in Resources */,
@@ -309,7 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */,
+				9E3EB10A1A077B3B00DB69C9 /* EntryListTableViewCell.swift in Sources */,
+				9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */,
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
+				9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */,
+				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
 				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
 				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,
