@@ -35,10 +35,6 @@ class EntryListParser: NSObject {
             entryList.append(entry)
         }
         
-        for obj: Entry in entryList {
-            println(obj.title)
-        }
-        
         return entryList
     }
     

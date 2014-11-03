@@ -29,6 +29,8 @@ class EntryListViewController: UIViewController {
         super.viewDidLoad()
         
         var builder: EntryListRequest.Builder = EntryListRequest.Builder(url: mApiUrl)
+        builder.setOnReceiveEntryList(onReceiveEntryList)
+        builder.setOnRequestFaild(onRequestFaild)
         builder.build().execute()
     }
 
@@ -36,6 +38,13 @@ class EntryListViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    private func onReceiveEntryList(entryList: Array<Entry>) {
+        println(entryList)
+    }
+    
+    private func onRequestFaild() {
+        println("request failed...")
+    }
 
     /*
     // MARK: - Navigation

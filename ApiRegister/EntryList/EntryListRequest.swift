@@ -14,7 +14,7 @@ class EntryListRequest: NSObject {
     private let mRequestUrl: String
     
     // APIのパース結果を受け取った時のコールバック
-    private let mOnReceiveEntryList: ([Entry] -> Void)?
+    private let mOnReceiveEntryList: (Array<Entry> -> Void)?
     
     // エラー時のコールバック
     private let mOnRequestFaild: (() -> Void)?
@@ -26,17 +26,46 @@ class EntryListRequest: NSObject {
         mOnRequestFaild = builder.mOnRequestFaild
     }
     
+    // リクエスト実行メソッド
     func execute() {
         Alamofire.request(.GET, mRequestUrl).responseJSON(onResponse)
     }
     
+    // レスポンスを受け取った時のコールバック実装
     private func onResponse(request: NSURLRequest, response: NSHTTPURLResponse?, json:AnyObject?, error: NSError?) {
         
-        if json == nil {
+        if error != nil {
+            println(error)
+            callOnRequestFaild()
             return
         }
         
-        EntryListParser().parse(json!)
+        if json == nil {
+            println("reponse json is null")
+            callOnRequestFaild()
+            return
+        }
+        
+        let entryList: Array<Entry>? = EntryListParser().parse(json!)
+        
+        if entryList == nil {
+            println("failed parse")
+            callOnRequestFaild()
+        } else {
+            callOnReceiveEntryList(entryList!)
+        }
+    }
+    
+    private func callOnRequestFaild() {
+        if mOnRequestFaild != nil {
+            mOnRequestFaild!()
+        }
+    }
+    
+    private func callOnReceiveEntryList(entryList: Array<Entry>) {
+        if mOnReceiveEntryList != nil {
+            mOnReceiveEntryList!(entryList)
+        }
     }
     
     class Builder: NSObject {
