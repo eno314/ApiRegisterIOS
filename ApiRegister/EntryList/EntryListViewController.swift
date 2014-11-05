@@ -70,7 +70,8 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println(mEntryList[indexPath.row].url)
+        let webVC = WebViewController(url: mEntryList[indexPath.row].url!)
+        self.navigationController?.pushViewController(webVC, animated: true)
     }
     
     // セルの高さ
