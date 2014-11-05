@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="ApiRegister" customModuleProvider="target">
             <connections>
+                <outlet property="indicator" destination="AQp-Wc-Rbf" id="nej-b4-54D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="N88-rt-19y" id="acF-QX-IjX"/>
             </connections>
@@ -19,13 +20,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" placeholderIntrinsicWidth="20" placeholderIntrinsicHeight="20" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AQp-Wc-Rbf">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="N88-rt-19y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="131-8c-svS"/>
                 <constraint firstAttribute="trailing" secondItem="N88-rt-19y" secondAttribute="trailing" id="4Fv-Kk-sPT"/>
+                <constraint firstAttribute="centerX" secondItem="AQp-Wc-Rbf" secondAttribute="centerX" id="HoH-OS-TeF"/>
                 <constraint firstItem="N88-rt-19y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QsU-qd-yxT"/>
                 <constraint firstAttribute="bottom" secondItem="N88-rt-19y" secondAttribute="bottom" id="aJW-XT-A8i"/>
+                <constraint firstAttribute="centerY" secondItem="AQp-Wc-Rbf" secondAttribute="centerY" id="ox8-uS-nYM"/>
             </constraints>
         </view>
     </objects>

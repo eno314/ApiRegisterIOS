@@ -8,9 +8,10 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
     
     @IBOutlet var webView: UIWebView!
+    @IBOutlet var indicator: UIActivityIndicatorView!
     
     private let mRootUrl: String
     
@@ -27,6 +28,8 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.webView.delegate = self
+        
         let requestUrl = NSURL(string: mRootUrl)
         self.webView.loadRequest(NSURLRequest(URL:requestUrl!))
         self.webView.scalesPageToFit = true
@@ -34,5 +37,17 @@ class WebViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // webviewのロード開始
+    func webViewDidStartLoad(webView: UIWebView) {
+        self.indicator.hidden = false
+        self.indicator.startAnimating()
+    }
+    
+    // webviewのロード終了
+    func webViewDidFinishLoad(webView: UIWebView) {
+        self.indicator.hidden = true
+        self.indicator.stopAnimating()
     }
 }
