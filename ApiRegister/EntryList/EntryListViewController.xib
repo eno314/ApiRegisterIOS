@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntryListViewController" customModule="ApiRegister" customModuleProvider="target">
             <connections>
+                <outlet property="indicator" destination="epm-b2-KT5" id="gPG-gh-Q5O"/>
                 <outlet property="mTableView" destination="Img-UY-FPb" id="oow-D6-kk6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,12 +21,17 @@
                     <rect key="frame" x="8" y="8" width="584" height="584"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="epm-b2-KT5">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottomMargin" secondItem="Img-UY-FPb" secondAttribute="bottom" id="ClX-GU-haq"/>
+                <constraint firstAttribute="centerX" secondItem="epm-b2-KT5" secondAttribute="centerX" id="WHm-xw-La6"/>
                 <constraint firstItem="Img-UY-FPb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="b4F-FZ-VJC"/>
                 <constraint firstItem="Img-UY-FPb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="e8e-bb-O2G"/>
+                <constraint firstAttribute="centerY" secondItem="epm-b2-KT5" secondAttribute="centerY" id="eEt-z4-tSx"/>
                 <constraint firstAttribute="trailingMargin" secondItem="Img-UY-FPb" secondAttribute="trailing" id="sbA-D9-MOk"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
