@@ -16,22 +16,36 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N88-rt-19y">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </webView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" placeholderIntrinsicWidth="20" placeholderIntrinsicHeight="20" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="AQp-Wc-Rbf">
                     <rect key="frame" x="290" y="290" width="20" height="20"/>
                 </activityIndicatorView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CG-hF-5UK">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <items>
+                        <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="Bah-S5-W4F"/>
+                        <barButtonItem title="戻る" id="kru-nF-Fa9"/>
+                        <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="3lh-Ri-VAb"/>
+                        <barButtonItem title="進む" id="HZW-aI-EUf"/>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZG7-Us-Lf3"/>
+                        <barButtonItem systemItem="refresh" id="86E-5d-sPy"/>
+                    </items>
+                </toolbar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N88-rt-19y">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="N88-rt-19y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="131-8c-svS"/>
+                <constraint firstItem="0CG-hF-5UK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3vl-lU-wJJ"/>
                 <constraint firstAttribute="trailing" secondItem="N88-rt-19y" secondAttribute="trailing" id="4Fv-Kk-sPT"/>
                 <constraint firstAttribute="centerX" secondItem="AQp-Wc-Rbf" secondAttribute="centerX" id="HoH-OS-TeF"/>
                 <constraint firstItem="N88-rt-19y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QsU-qd-yxT"/>
-                <constraint firstAttribute="bottom" secondItem="N88-rt-19y" secondAttribute="bottom" id="aJW-XT-A8i"/>
+                <constraint firstItem="0CG-hF-5UK" firstAttribute="top" secondItem="N88-rt-19y" secondAttribute="bottom" id="aqr-Cf-hm0"/>
+                <constraint firstAttribute="bottom" secondItem="0CG-hF-5UK" secondAttribute="bottom" id="bj5-6a-jB8"/>
                 <constraint firstAttribute="centerY" secondItem="AQp-Wc-Rbf" secondAttribute="centerY" id="ox8-uS-nYM"/>
+                <constraint firstAttribute="trailing" secondItem="0CG-hF-5UK" secondAttribute="trailing" id="y8m-pa-lLD"/>
             </constraints>
         </view>
     </objects>
