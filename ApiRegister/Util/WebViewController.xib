@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="ApiRegister" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="kru-nF-Fa9" id="JtI-I0-MOj"/>
+                <outlet property="forwardButton" destination="HZW-aI-EUf" id="Yep-ro-Mdy"/>
                 <outlet property="indicator" destination="AQp-Wc-Rbf" id="nej-b4-54D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="N88-rt-19y" id="acF-QX-IjX"/>
@@ -23,11 +25,23 @@
                     <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                     <items>
                         <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="Bah-S5-W4F"/>
-                        <barButtonItem title="戻る" id="kru-nF-Fa9"/>
+                        <barButtonItem title="戻る" id="kru-nF-Fa9">
+                            <connections>
+                                <action selector="clickBackButton:" destination="-1" id="NKw-TV-naH"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="3lh-Ri-VAb"/>
-                        <barButtonItem title="進む" id="HZW-aI-EUf"/>
+                        <barButtonItem title="進む" id="HZW-aI-EUf">
+                            <connections>
+                                <action selector="clickForwardButton:" destination="-1" id="1Sc-2k-9Or"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZG7-Us-Lf3"/>
-                        <barButtonItem systemItem="refresh" id="86E-5d-sPy"/>
+                        <barButtonItem systemItem="refresh" id="86E-5d-sPy">
+                            <connections>
+                                <action selector="clickReloadButton:" destination="-1" id="LTo-GX-ciI"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N88-rt-19y">
