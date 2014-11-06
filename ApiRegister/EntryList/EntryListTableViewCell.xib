@@ -26,6 +26,9 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-5y-gKO">
+                        <rect key="frame" x="45" y="40" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="yWl-Z1-T8e" firstAttribute="leading" secondItem="RdQ-ta-K1F" secondAttribute="trailing" constant="8" id="7Sm-2K-7WO"/>
@@ -37,6 +40,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="entryImageView" destination="RdQ-ta-K1F" id="YqP-Xa-KGd"/>
+                <outlet property="indicator" destination="bdH-5y-gKO" id="e39-Vf-Tfk"/>
                 <outlet property="titleLabel" destination="yWl-Z1-T8e" id="w6a-pu-aKI"/>
             </connections>
             <point key="canvasLocation" x="274.5" y="158"/>

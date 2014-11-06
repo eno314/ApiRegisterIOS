@@ -17,6 +17,7 @@ private let DEFAUTL_CELL_TEXT_LINE = 3
 
 class EntryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var indicator: UIActivityIndicatorView!
     @IBOutlet var mTableView: UITableView!
     
     private let mApiUrl: String
@@ -85,6 +86,7 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // APIリクエスト
     private func request() {
+        startLoading()
         let builder: EntryListRequest.Builder = EntryListRequest.Builder(url: mApiUrl)
         builder.setOnReceiveEntryList(onReceiveEntryList)
         builder.setOnRequestFaild(onRequestFaild)
@@ -93,12 +95,14 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // APIのパース結果を受け取った時のコールバック実装
     private func onReceiveEntryList(entryList: Array<Entry>) {
+        stopLoading()
         mEntryList = entryList
         mTableView.reloadData()
     }
     
     // APIリクエストに失敗した時のコールバック実装
     private func onRequestFaild() {
+        stopLoading()
         println("request failed...")
     }
     
@@ -119,11 +123,22 @@ class EntryListViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    // 画像があるかどうか
     private func hasImage(index: Int) -> Bool {
         if mEntryList[index].image == nil {
             return false
         }
         
         return true
+    }
+    
+    private func startLoading() {
+        self.indicator.startAnimating()
+        self.indicator.hidden = false
+    }
+    
+    private func stopLoading() {
+        self.indicator.stopAnimating()
+        self.indicator.hidden = true
     }
 }
