@@ -26,6 +26,8 @@
 		9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7B1A051FC500A507D3 /* Entry.swift */; };
 		9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7D1A05213800A507D3 /* EntryListRequest.swift */; };
 		9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */; };
+		9ED3FFA81A09D245003391E9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFA61A09D245003391E9 /* WebViewController.swift */; };
+		9ED3FFA91A09D245003391E9 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3FFA71A09D245003391E9 /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		9E938C7B1A051FC500A507D3 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = EntryList/Entry.swift; sourceTree = "<group>"; };
 		9E938C7D1A05213800A507D3 /* EntryListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListRequest.swift; path = EntryList/EntryListRequest.swift; sourceTree = "<group>"; };
 		9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkImageVIew.swift; path = Util/NetworkImageVIew.swift; sourceTree = "<group>"; };
+		9ED3FFA61A09D245003391E9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Util/WebViewController.swift; sourceTree = "<group>"; };
+		9ED3FFA71A09D245003391E9 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebViewController.xib; path = Util/WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */,
+				9ED3FFA61A09D245003391E9 /* WebViewController.swift */,
+				9ED3FFA71A09D245003391E9 /* WebViewController.xib */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				9E938C121A04825A00A507D3 /* Main.storyboard in Resources */,
 				9E3EB10E1A077B7A00DB69C9 /* EntryListTableViewCell.xib in Resources */,
 				9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */,
+				9ED3FFA91A09D245003391E9 /* WebViewController.xib in Resources */,
 				9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */,
 				9E938C141A04825A00A507D3 /* Images.xcassets in Resources */,
 			);
@@ -344,6 +351,7 @@
 				9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */,
 				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
+				9ED3FFA81A09D245003391E9 /* WebViewController.swift in Sources */,
 				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
 				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,
 				9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */,
