@@ -74,14 +74,4 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func pressAddButton(sender: AnyObject) {
         presentViewController(buildAddApiDialog(), animated: true, completion: nil);
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
