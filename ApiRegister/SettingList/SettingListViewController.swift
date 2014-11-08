@@ -51,6 +51,6 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // 追加ボタンをクリックした時の処理
     @IBAction func pressAddButton(sender: AnyObject) {
-        println("click add button")
+        presentViewController(AddApiViewController(), animated: true, completion: nil);
     }
 }

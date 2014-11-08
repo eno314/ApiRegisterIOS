@@ -31,6 +31,8 @@
 		9ED3FFB01A0DB66C003391E9 /* SettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFAF1A0DB66C003391E9 /* SettingListViewController.swift */; };
 		9ED3FFB21A0DCABD003391E9 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFB11A0DCABD003391E9 /* Setting.swift */; };
 		9ED3FFB41A0DCC2A003391E9 /* SettingListStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFB31A0DCC2A003391E9 /* SettingListStrage.swift */; };
+		9ED3FFB71A0DD7BA003391E9 /* AddApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFB51A0DD7BA003391E9 /* AddApiViewController.swift */; };
+		9ED3FFB81A0DD7BA003391E9 /* AddApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3FFB61A0DD7BA003391E9 /* AddApiViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		9ED3FFAF1A0DB66C003391E9 /* SettingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingListViewController.swift; path = SettingList/SettingListViewController.swift; sourceTree = "<group>"; };
 		9ED3FFB11A0DCABD003391E9 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Setting.swift; path = SettingList/Setting.swift; sourceTree = "<group>"; };
 		9ED3FFB31A0DCC2A003391E9 /* SettingListStrage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingListStrage.swift; path = SettingList/SettingListStrage.swift; sourceTree = "<group>"; };
+		9ED3FFB51A0DD7BA003391E9 /* AddApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddApiViewController.swift; path = Util/AddApiViewController.swift; sourceTree = "<group>"; };
+		9ED3FFB61A0DD7BA003391E9 /* AddApiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddApiViewController.xib; path = Util/AddApiViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 				9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */,
 				9ED3FFA61A09D245003391E9 /* WebViewController.swift */,
 				9ED3FFA71A09D245003391E9 /* WebViewController.xib */,
+				9ED3FFB51A0DD7BA003391E9 /* AddApiViewController.swift */,
+				9ED3FFB61A0DD7BA003391E9 /* AddApiViewController.xib */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */,
 				9ED3FFA91A09D245003391E9 /* WebViewController.xib in Resources */,
 				9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */,
+				9ED3FFB81A0DD7BA003391E9 /* AddApiViewController.xib in Resources */,
 				9E938C141A04825A00A507D3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +375,7 @@
 				9ED3FFB21A0DCABD003391E9 /* Setting.swift in Sources */,
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
 				9ED3FFB41A0DCC2A003391E9 /* SettingListStrage.swift in Sources */,
+				9ED3FFB71A0DD7BA003391E9 /* AddApiViewController.swift in Sources */,
 				9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */,
 				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
