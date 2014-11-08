@@ -28,6 +28,7 @@
 		9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */; };
 		9ED3FFA81A09D245003391E9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFA61A09D245003391E9 /* WebViewController.swift */; };
 		9ED3FFA91A09D245003391E9 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3FFA71A09D245003391E9 /* WebViewController.xib */; };
+		9ED3FFB01A0DB66C003391E9 /* SettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFAF1A0DB66C003391E9 /* SettingListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkImageVIew.swift; path = Util/NetworkImageVIew.swift; sourceTree = "<group>"; };
 		9ED3FFA61A09D245003391E9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Util/WebViewController.swift; sourceTree = "<group>"; };
 		9ED3FFA71A09D245003391E9 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebViewController.xib; path = Util/WebViewController.xib; sourceTree = "<group>"; };
+		9ED3FFAF1A0DB66C003391E9 /* SettingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingListViewController.swift; path = SettingList/SettingListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		9E938C091A04825A00A507D3 /* ApiRegister */ = {
 			isa = PBXGroup;
 			children = (
+				9ED3FFAC1A0DB5F9003391E9 /* SettingList */,
 				9E88C7AD1A07310C0072D813 /* Util */,
 				9E938C721A05058E00A507D3 /* EntryList */,
 				9E938C311A04891600A507D3 /* ApiList */,
@@ -214,6 +217,14 @@
 				9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */,
 			);
 			name = EntryList;
+			sourceTree = "<group>";
+		};
+		9ED3FFAC1A0DB5F9003391E9 /* SettingList */ = {
+			isa = PBXGroup;
+			children = (
+				9ED3FFAF1A0DB66C003391E9 /* SettingListViewController.swift */,
+			);
+			name = SettingList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 				9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */,
 				9E3EB10A1A077B3B00DB69C9 /* EntryListTableViewCell.swift in Sources */,
 				9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */,
+				9ED3FFB01A0DB66C003391E9 /* SettingListViewController.swift in Sources */,
 				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
 				9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */,
 				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,

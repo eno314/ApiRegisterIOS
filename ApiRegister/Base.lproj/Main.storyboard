@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Api List View Controller-->
+        <!--Setting List View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ApiListViewController" customModule="ApiRegister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="SettingListViewController" customModule="ApiRegister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -33,12 +33,12 @@
                     <navigationItem key="navigationItem" id="UbK-qd-ghQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FZZ-4a-0O1">
                             <connections>
-                                <action selector="pressAddButton:" destination="vXZ-lx-hvc" id="dNJ-5W-ZcM"/>
+                                <action selector="pressAddButton:" destination="vXZ-lx-hvc" id="VbC-mD-uQM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mTableView" destination="7DB-cy-UJf" id="iPL-1L-om2"/>
+                        <outlet property="tableView" destination="7DB-cy-UJf" id="zw4-nQ-Br7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
