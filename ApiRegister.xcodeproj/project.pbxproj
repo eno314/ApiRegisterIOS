@@ -7,12 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3EB10A1A077B3B00DB69C9 /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */; };
+		9E3EB10E1A077B7A00DB69C9 /* EntryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */; };
+		9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88C7A91A05C9830072D813 /* EntryListParser.swift */; };
 		9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C0C1A04825A00A507D3 /* AppDelegate.swift */; };
-		9E938C0F1A04825A00A507D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C0E1A04825A00A507D3 /* ViewController.swift */; };
 		9E938C121A04825A00A507D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C101A04825A00A507D3 /* Main.storyboard */; };
 		9E938C141A04825A00A507D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C131A04825A00A507D3 /* Images.xcassets */; };
 		9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C151A04825A00A507D3 /* LaunchScreen.xib */; };
 		9E938C231A04825A00A507D3 /* ApiRegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */; };
+		9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */; };
+		9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C341A0498AE00A507D3 /* ApiListViewController.swift */; };
+		9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C361A04AAAE00A507D3 /* ApiInfo.swift */; };
+		9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */; };
+		9E938C6D1A0500E200A507D3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E938C6A1A0500A100A507D3 /* Alamofire.framework */; };
+		9E938C6F1A05010700A507D3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9E938C6A1A0500A100A507D3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E938C791A05083A00A507D3 /* EntryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C771A05083A00A507D3 /* EntryListViewController.swift */; };
+		9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E938C781A05083A00A507D3 /* EntryListViewController.xib */; };
+		9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7B1A051FC500A507D3 /* Entry.swift */; };
+		9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E938C7D1A05213800A507D3 /* EntryListRequest.swift */; };
+		9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */; };
+		9ED3FFA81A09D245003391E9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFA61A09D245003391E9 /* WebViewController.swift */; };
+		9ED3FFA91A09D245003391E9 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3FFA71A09D245003391E9 /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,19 +38,60 @@
 			remoteGlobalIDString = 9E938C061A04825A00A507D3;
 			remoteInfo = ApiRegister;
 		};
+		9E938C691A0500A100A507D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E938C641A0500A100A507D3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		9E938C6B1A0500A100A507D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E938C641A0500A100A507D3 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9E938C6E1A0500F500A507D3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9E938C6F1A05010700A507D3 /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListTableViewCell.swift; path = EntryList/EntryListTableViewCell.swift; sourceTree = "<group>"; };
+		9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListTableViewCell.xib; path = EntryList/EntryListTableViewCell.xib; sourceTree = "<group>"; };
+		9E88C7A91A05C9830072D813 /* EntryListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListParser.swift; path = EntryList/EntryListParser.swift; sourceTree = "<group>"; };
 		9E938C071A04825A00A507D3 /* ApiRegister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiRegister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E938C0B1A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E938C0C1A04825A00A507D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E938C0E1A04825A00A507D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E938C111A04825A00A507D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E938C131A04825A00A507D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9E938C161A04825A00A507D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9E938C1C1A04825A00A507D3 /* ApiRegisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApiRegisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E938C211A04825A00A507D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E938C221A04825A00A507D3 /* ApiRegisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRegisterTests.swift; sourceTree = "<group>"; };
+		9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddApiDialogBuilder.swift; path = ApiList/AddApiDialogBuilder.swift; sourceTree = "<group>"; };
+		9E938C341A0498AE00A507D3 /* ApiListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListViewController.swift; path = ApiList/ApiListViewController.swift; sourceTree = "<group>"; };
+		9E938C361A04AAAE00A507D3 /* ApiInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiInfo.swift; path = ApiList/ApiInfo.swift; sourceTree = "<group>"; };
+		9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListStrage.swift; path = ApiList/ApiListStrage.swift; sourceTree = "<group>"; };
+		9E938C641A0500A100A507D3 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		9E938C771A05083A00A507D3 /* EntryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListViewController.swift; path = EntryList/EntryListViewController.swift; sourceTree = "<group>"; };
+		9E938C781A05083A00A507D3 /* EntryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EntryListViewController.xib; path = EntryList/EntryListViewController.xib; sourceTree = "<group>"; };
+		9E938C7B1A051FC500A507D3 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = EntryList/Entry.swift; sourceTree = "<group>"; };
+		9E938C7D1A05213800A507D3 /* EntryListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryListRequest.swift; path = EntryList/EntryListRequest.swift; sourceTree = "<group>"; };
+		9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkImageVIew.swift; path = Util/NetworkImageVIew.swift; sourceTree = "<group>"; };
+		9ED3FFA61A09D245003391E9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Util/WebViewController.swift; sourceTree = "<group>"; };
+		9ED3FFA71A09D245003391E9 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebViewController.xib; path = Util/WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E938C6D1A0500E200A507D3 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +113,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E88C7AD1A07310C0072D813 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9E99B1151A07327E00FDB2DF /* NetworkImageVIew.swift */,
+				9ED3FFA61A09D245003391E9 /* WebViewController.swift */,
+				9ED3FFA71A09D245003391E9 /* WebViewController.xib */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		9E938BFE1A04825A00A507D3 = {
 			isa = PBXGroup;
 			children = (
+				9E938C641A0500A100A507D3 /* Alamofire.xcodeproj */,
 				9E938C091A04825A00A507D3 /* ApiRegister */,
 				9E938C1F1A04825A00A507D3 /* ApiRegisterTests */,
 				9E938C081A04825A00A507D3 /* Products */,
@@ -77,8 +145,10 @@
 		9E938C091A04825A00A507D3 /* ApiRegister */ = {
 			isa = PBXGroup;
 			children = (
+				9E88C7AD1A07310C0072D813 /* Util */,
+				9E938C721A05058E00A507D3 /* EntryList */,
+				9E938C311A04891600A507D3 /* ApiList */,
 				9E938C0C1A04825A00A507D3 /* AppDelegate.swift */,
-				9E938C0E1A04825A00A507D3 /* ViewController.swift */,
 				9E938C101A04825A00A507D3 /* Main.storyboard */,
 				9E938C131A04825A00A507D3 /* Images.xcassets */,
 				9E938C151A04825A00A507D3 /* LaunchScreen.xib */,
@@ -112,6 +182,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9E938C311A04891600A507D3 /* ApiList */ = {
+			isa = PBXGroup;
+			children = (
+				9E938C341A0498AE00A507D3 /* ApiListViewController.swift */,
+				9E938C321A0489BD00A507D3 /* AddApiDialogBuilder.swift */,
+				9E938C361A04AAAE00A507D3 /* ApiInfo.swift */,
+				9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */,
+			);
+			name = ApiList;
+			sourceTree = "<group>";
+		};
+		9E938C651A0500A100A507D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E938C6A1A0500A100A507D3 /* Alamofire.framework */,
+				9E938C6C1A0500A100A507D3 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E938C721A05058E00A507D3 /* EntryList */ = {
+			isa = PBXGroup;
+			children = (
+				9E938C771A05083A00A507D3 /* EntryListViewController.swift */,
+				9E938C781A05083A00A507D3 /* EntryListViewController.xib */,
+				9E938C7B1A051FC500A507D3 /* Entry.swift */,
+				9E938C7D1A05213800A507D3 /* EntryListRequest.swift */,
+				9E88C7A91A05C9830072D813 /* EntryListParser.swift */,
+				9E3EB1091A077B3B00DB69C9 /* EntryListTableViewCell.swift */,
+				9E3EB10D1A077B7A00DB69C9 /* EntryListTableViewCell.xib */,
+			);
+			name = EntryList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +226,7 @@
 				9E938C031A04825A00A507D3 /* Sources */,
 				9E938C041A04825A00A507D3 /* Frameworks */,
 				9E938C051A04825A00A507D3 /* Resources */,
+				9E938C6E1A0500F500A507D3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -161,6 +266,7 @@
 				TargetAttributes = {
 					9E938C061A04825A00A507D3 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5TK9UA7VJX;
 					};
 					9E938C1B1A04825A00A507D3 = {
 						CreatedOnToolsVersion = 6.1;
@@ -179,6 +285,12 @@
 			mainGroup = 9E938BFE1A04825A00A507D3;
 			productRefGroup = 9E938C081A04825A00A507D3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9E938C651A0500A100A507D3 /* Products */;
+					ProjectRef = 9E938C641A0500A100A507D3 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9E938C061A04825A00A507D3 /* ApiRegister */,
@@ -187,12 +299,32 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9E938C6A1A0500A100A507D3 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 9E938C691A0500A100A507D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9E938C6C1A0500A100A507D3 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 9E938C6B1A0500A100A507D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		9E938C051A04825A00A507D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9E938C121A04825A00A507D3 /* Main.storyboard in Resources */,
+				9E3EB10E1A077B7A00DB69C9 /* EntryListTableViewCell.xib in Resources */,
+				9E938C7A1A05083A00A507D3 /* EntryListViewController.xib in Resources */,
+				9ED3FFA91A09D245003391E9 /* WebViewController.xib in Resources */,
 				9E938C171A04825A00A507D3 /* LaunchScreen.xib in Resources */,
 				9E938C141A04825A00A507D3 /* Images.xcassets in Resources */,
 			);
@@ -212,8 +344,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E938C0F1A04825A00A507D3 /* ViewController.swift in Sources */,
+				9E938C7E1A05213800A507D3 /* EntryListRequest.swift in Sources */,
+				9E3EB10A1A077B3B00DB69C9 /* EntryListTableViewCell.swift in Sources */,
+				9E938C7C1A051FC500A507D3 /* Entry.swift in Sources */,
+				9E938C351A0498AE00A507D3 /* ApiListViewController.swift in Sources */,
+				9E99B1161A07327E00FDB2DF /* NetworkImageVIew.swift in Sources */,
+				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,
+				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
+				9ED3FFA81A09D245003391E9 /* WebViewController.swift in Sources */,
+				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
+				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,
 				9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */,
+				9E938C791A05083A00A507D3 /* EntryListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ApiRegister/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ApiRegister/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -405,6 +549,7 @@
 				9E938C281A04825A00A507D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E938C291A04825A00A507D3 /* Build configuration list for PBXNativeTarget "ApiRegisterTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +558,7 @@
 				9E938C2B1A04825A00A507D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
