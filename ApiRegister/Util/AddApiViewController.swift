@@ -8,13 +8,31 @@
 
 import UIKit
 
+private var STRAGE_TYPE_SETTING = 0
+private var STRAGE_TYPE_API = 1
+
 class AddApiViewController: UIViewController {
     
-    override init() {
-        super.init(nibName: "AddApiViewController", bundle: nil)
-    }
+    @IBOutlet var titleText: UITextField!
+    @IBOutlet var urlText: UITextField!
     
-    init(setting: Setting) {
+    private var mInitTitle: String?
+    private var mInitUrl: String?
+    private var mStrageType: Int
+    private var mOnClickButton: (() -> Void)?
+    
+    private init(builder: AddApiViewController.SettingBuilder) {
+        mStrageType = STRAGE_TYPE_SETTING
+        
+        if builder.mSetting != nil {
+            mInitTitle = builder.mSetting!.title
+            mInitUrl = builder.mSetting!.url
+        }
+        
+        if builder.mOnClickButton != nil {
+            mOnClickButton = builder.mOnClickButton
+        }
+        
         super.init(nibName: "AddApiViewController", bundle: nil)
     }
 
@@ -24,11 +42,50 @@ class AddApiViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if mInitTitle != nil {
+            self.titleText.text = mInitTitle
+        }
+        
+        if mInitUrl != nil {
+            self.urlText.text = mInitUrl
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func pressButton(sender: AnyObject) {
+        callOnClickButton()
+    }
     
+    @IBAction func pressCancelButton(sender: AnyObject) {
+        callOnClickButton()
+    }
+    
+    private func callOnClickButton() {
+        if mOnClickButton != nil {
+            mOnClickButton!()
+        }
+    }
+    
+    class SettingBuilder: NSObject {
+        private var mSetting: Setting?
+        private var mOnClickButton: (() -> Void)?
+        
+        func setOnClickButton(onClickButton: () -> Void) -> SettingBuilder {
+            mOnClickButton = onClickButton
+            return self
+        }
+        
+        func setSetting(setting: Setting) -> SettingBuilder {
+            mSetting = setting
+            return self
+        }
+        
+        func build() -> AddApiViewController {
+            return AddApiViewController(builder: self)
+        }
+    }
 }

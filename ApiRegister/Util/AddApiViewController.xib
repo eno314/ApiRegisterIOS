@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddApiViewController" customModule="ApiRegister" customModuleProvider="target">
             <connections>
+                <outlet property="titleText" destination="38R-k4-rBj" id="fKf-wE-apx"/>
+                <outlet property="urlText" destination="dbF-Xl-shB" id="3Wl-Th-hfp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,24 +25,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-kh-qP1">
-                    <rect key="frame" x="283" y="210" width="34" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="VXN-Wd-p36"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvS-45-IH1">
-                    <rect key="frame" x="277" y="310" width="46" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="46" id="bi7-5F-MQh"/>
-                    </constraints>
-                    <state key="normal" title="決定">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="38R-k4-rBj">
                     <rect key="frame" x="200" y="165" width="200" height="30"/>
                     <constraints>
@@ -60,16 +44,48 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTf-kh-qP1">
+                    <rect key="frame" x="283" y="210" width="34" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="VXN-Wd-p36"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvS-45-IH1">
+                    <rect key="frame" x="227" y="310" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="bi7-5F-MQh"/>
+                    </constraints>
+                    <state key="normal" title="決定">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pressButton:" destination="-1" eventType="touchUpInside" id="ONo-3B-dV8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="675-3F-fZJ">
+                    <rect key="frame" x="313" y="310" width="75" height="30"/>
+                    <state key="normal" title="キャンセル">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pressCancelButton:" destination="-1" eventType="touchUpInside" id="qim-7Z-vXk"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="38R-k4-rBj" secondAttribute="centerX" id="0l7-a0-mGM"/>
                 <constraint firstAttribute="centerY" secondItem="N6J-ek-jqd" secondAttribute="centerY" constant="150" id="0xI-qD-Q8j"/>
                 <constraint firstAttribute="centerX" secondItem="dbF-Xl-shB" secondAttribute="centerX" id="1N6-92-0VY"/>
+                <constraint firstAttribute="centerX" secondItem="675-3F-fZJ" secondAttribute="centerX" constant="-50" id="8Q1-UU-NVM"/>
                 <constraint firstAttribute="centerY" secondItem="hvS-45-IH1" secondAttribute="centerY" constant="-25" id="Gtb-Nm-kxh"/>
                 <constraint firstAttribute="centerY" secondItem="38R-k4-rBj" secondAttribute="centerY" constant="120" id="PBW-rT-XGd"/>
-                <constraint firstAttribute="centerX" secondItem="hvS-45-IH1" secondAttribute="centerX" id="X7l-q1-0Af"/>
+                <constraint firstAttribute="centerX" secondItem="hvS-45-IH1" secondAttribute="centerX" constant="50" id="X7l-q1-0Af"/>
                 <constraint firstAttribute="centerX" secondItem="N6J-ek-jqd" secondAttribute="centerX" id="Xou-k4-HVl"/>
+                <constraint firstAttribute="centerY" secondItem="675-3F-fZJ" secondAttribute="centerY" constant="-25" id="fKQ-We-pLE"/>
                 <constraint firstAttribute="centerX" secondItem="oTf-kh-qP1" secondAttribute="centerX" id="giV-6P-rXW"/>
                 <constraint firstAttribute="centerY" secondItem="dbF-Xl-shB" secondAttribute="centerY" constant="50" id="q4O-Me-ygC"/>
                 <constraint firstAttribute="centerY" secondItem="oTf-kh-qP1" secondAttribute="centerY" constant="80" id="ulQ-UC-au3"/>
