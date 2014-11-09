@@ -53,7 +53,9 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //
+        if indexPath.section == 0 {
+            self.navigationController?.pushViewController(ApiListViewController(), animated: true)
+        }
     }
     
     // ヘッダのタイトル

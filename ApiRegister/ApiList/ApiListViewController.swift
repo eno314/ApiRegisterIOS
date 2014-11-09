@@ -2,25 +2,35 @@
 //  ApiListViewController.swift
 //  ApiRegister
 //
-//  Created by hiroto kitamur on 2014/11/01.
+//  Created by hiroto kitamur on 2014/11/09.
 //  Copyright (c) 2014年 eno. All rights reserved.
 //
 
 import UIKit
 
-private let TITLE = "登録一覧"
-
 class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet var mTableView: UITableView!
     
+    @IBOutlet var tableView: UITableView!
+    
+    private var mSettingApiUrl: String?
+    
+    override init() {
+        super.init(nibName: "ApiListViewController", bundle: nil)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mTableView.delegate = self
-        mTableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
-        self.title = TITLE
+        if mSettingApiUrl == nil {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "＋", style: .Plain, target: self, action: "onClickAddButton:")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,15 +43,14 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // セルの内容を変更
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
-        -> UITableViewCell {
-            
-            let cell: UITableViewCell =
-            UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-            
-            cell.textLabel.text = ApiListStrage.get()[indexPath.row].title
-            
-            return cell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell: UITableViewCell =
+        UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        
+        cell.textLabel.text = ApiListStrage.get()[indexPath.row].title
+        
+        return cell
     }
     
     // セルタップ時
@@ -51,27 +60,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.navigationController?.pushViewController(entryListVC, animated: true)
     }
     
-    // APIをリストに追加するためのダイアログ生成
-    private func buildAddApiDialog() -> UIAlertController {
-        var builder: AddApiDialogBuilder = AddApiDialogBuilder()
-        builder.setOnInvalidInput(onFailedReceiveApiInfo)
-        builder.setOnValidInput(onReceiveApiInfo)
-        return builder.build()
-    }
-    
-    // API追加ダイアログからAPI情報を受け取った時のコールバック
-    private func onReceiveApiInfo(title: String, url: String) {
-        ApiListStrage.add(url, title: title)
-        mTableView.reloadData()
-    }
-    
-    // API追加ダイアログからAPI情報を受取るのが失敗した時のコールバック
-    private func onFailedReceiveApiInfo() {
-        println("入力がたりねーよ")
-    }
-    
-    // 追加ボタンをクリックした時の処理
-    @IBAction func pressAddButton(sender: AnyObject) {
-        presentViewController(buildAddApiDialog(), animated: true, completion: nil);
+    func onClickAddButton(sender: UIButton) {
+        println("AAAA")
     }
 }
