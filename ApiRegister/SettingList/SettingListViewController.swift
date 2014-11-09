@@ -29,7 +29,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return SettingListStrage.get().count
     }
     
     // セルの内容を変更
@@ -39,7 +39,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
         let cell: UITableViewCell =
         UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
             
-        cell.textLabel.text = "あああ"
+        cell.textLabel.text = SettingListStrage.get()[indexPath.row].title
             
         return cell
     }

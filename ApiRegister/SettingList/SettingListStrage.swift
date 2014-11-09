@@ -13,7 +13,7 @@ private let KEY = "SettingList"
 
 class SettingListStrage: NSObject {
     
-    class func add(url: String, title: String) -> Void {
+    class func add(title: String, url: String) -> Void {
         var settingList:[String] = []
         let userDefaults = NSUserDefaults.standardUserDefaults()
         

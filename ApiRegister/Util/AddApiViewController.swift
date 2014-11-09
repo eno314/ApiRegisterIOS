@@ -70,7 +70,9 @@ class AddApiViewController: UIViewController {
             return
         }
         
-        
+        if mStrageType == STRAGE_TYPE_SETTING {
+            SettingListStrage.add(self.titleText.text, url: self.urlText.text)
+        }
         
         callOnClickButton()
     }
