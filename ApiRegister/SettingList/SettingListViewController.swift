@@ -29,24 +29,45 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SettingListStrage.get().count
+        if section == 0 {
+            return 1
+        } else {
+            return SettingListStrage.get().count
+        }
     }
     
     // セルの内容を変更
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
-        -> UITableViewCell {
-            
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell: UITableViewCell =
         UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-            
-        cell.textLabel.text = SettingListStrage.get()[indexPath.row].title
-            
+        
+        if indexPath.section == 0 {
+            cell.textLabel.text = "手入力"
+        } else {
+            cell.textLabel.text = SettingListStrage.get()[indexPath.row].title
+        }
+        
         return cell
     }
     
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //
+    }
+    
+    // ヘッダのタイトル
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "手入力"
+        } else {
+            return "設定API"
+        }
+    }
+    
+    // セクションの数
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
     }
     
     // 追加ボタンをクリックした時の処理
