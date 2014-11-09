@@ -15,6 +15,7 @@ class AddApiViewController: UIViewController {
     
     @IBOutlet var titleText: UITextField!
     @IBOutlet var urlText: UITextField!
+    @IBOutlet var warningLabel: UILabel!
     
     private var mInitTitle: String?
     private var mInitUrl: String?
@@ -50,6 +51,8 @@ class AddApiViewController: UIViewController {
         if mInitUrl != nil {
             self.urlText.text = mInitUrl
         }
+        
+        titleText.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +60,18 @@ class AddApiViewController: UIViewController {
     }
     
     @IBAction func pressButton(sender: AnyObject) {
+        if self.titleText.text == nil || self.titleText.text == "" {
+            self.warningLabel.text = "タイトル未入力"
+            return
+        }
+        
+        if self.urlText.text == nil || self.urlText.text == "" {
+            self.warningLabel.text = "URL未入力"
+            return
+        }
+        
+        
+        
         callOnClickButton()
     }
     
