@@ -15,9 +15,9 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var mSettingApiUrl: String?
     private var mApiList: ApiList?
     
-    override init() {
+    init(title: String) {
         super.init(nibName: "ApiListViewController", bundle: nil)
-        self.title = "手入力"
+        self.title = title
     }
     
     init(title: String, url: String) {

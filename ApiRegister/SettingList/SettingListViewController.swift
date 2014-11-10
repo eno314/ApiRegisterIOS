@@ -58,7 +58,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == SECTION_HANDMAKE {
-            self.navigationController?.pushViewController(ApiListViewController(), animated: true)
+            self.navigationController?.pushViewController(ApiListViewController(title: TITLE_HANDMAKE), animated: true)
         } else {
             let setting: Setting = SettingListStrage.get()[indexPath.row]
             self.navigationController?.pushViewController(ApiListViewController(title: setting.title, url: setting.url), animated: true)
