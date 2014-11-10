@@ -11,13 +11,31 @@ import UIKit
 class ApiInfo: NSObject {
     
     // リストに表示するためのタイトル
-    let title: String
+    var title: String?
     
     // APIのURL
-    let url: String
+    var url: String?
+    
+    override init() {
+        super.init()
+    }
     
     init(title: String, url: String) {
         self.title = title
         self.url = url
+        
+        super.init()
+    }
+    
+    func isValid() -> Bool {
+        if self.title == nil {
+            return false
+        }
+        
+        if self.url == nil {
+            return false
+        }
+        
+        return true
     }
 }

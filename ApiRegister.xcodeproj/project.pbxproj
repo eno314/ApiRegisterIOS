@@ -34,6 +34,8 @@
 		9ED3FFB81A0DD7BA003391E9 /* AddApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3FFB61A0DD7BA003391E9 /* AddApiViewController.xib */; };
 		9ED3FFC21A0F3695003391E9 /* ApiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC01A0F3695003391E9 /* ApiListViewController.swift */; };
 		9ED3FFC31A0F3695003391E9 /* ApiListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC11A0F3695003391E9 /* ApiListViewController.xib */; };
+		9ED3FFC51A111A04003391E9 /* ApiListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC41A111A04003391E9 /* ApiListParser.swift */; };
+		9ED3FFC71A111C9A003391E9 /* ApiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC61A111C9A003391E9 /* ApiList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		9ED3FFB61A0DD7BA003391E9 /* AddApiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddApiViewController.xib; path = Util/AddApiViewController.xib; sourceTree = "<group>"; };
 		9ED3FFC01A0F3695003391E9 /* ApiListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListViewController.swift; path = ApiList/ApiListViewController.swift; sourceTree = "<group>"; };
 		9ED3FFC11A0F3695003391E9 /* ApiListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ApiListViewController.xib; path = ApiList/ApiListViewController.xib; sourceTree = "<group>"; };
+		9ED3FFC41A111A04003391E9 /* ApiListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListParser.swift; path = ApiList/ApiListParser.swift; sourceTree = "<group>"; };
+		9ED3FFC61A111C9A003391E9 /* ApiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiList.swift; path = ApiList/ApiList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 				9E938C381A04AB7F00A507D3 /* ApiListStrage.swift */,
 				9ED3FFC01A0F3695003391E9 /* ApiListViewController.swift */,
 				9ED3FFC11A0F3695003391E9 /* ApiListViewController.xib */,
+				9ED3FFC41A111A04003391E9 /* ApiListParser.swift */,
+				9ED3FFC61A111C9A003391E9 /* ApiList.swift */,
 			);
 			name = ApiList;
 			sourceTree = "<group>";
@@ -384,7 +390,9 @@
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
 				9ED3FFA81A09D245003391E9 /* WebViewController.swift in Sources */,
 				9ED3FFC21A0F3695003391E9 /* ApiListViewController.swift in Sources */,
+				9ED3FFC71A111C9A003391E9 /* ApiList.swift in Sources */,
 				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
+				9ED3FFC51A111A04003391E9 /* ApiListParser.swift in Sources */,
 				9E938C391A04AB7F00A507D3 /* ApiListStrage.swift in Sources */,
 				9E938C0D1A04825A00A507D3 /* AppDelegate.swift in Sources */,
 				9E938C791A05083A00A507D3 /* EntryListViewController.swift in Sources */,

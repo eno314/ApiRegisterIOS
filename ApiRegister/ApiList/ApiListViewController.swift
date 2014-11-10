@@ -18,6 +18,11 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.init(nibName: "ApiListViewController", bundle: nil)
     }
     
+    init(url: String) {
+        mSettingApiUrl = url
+        super.init(nibName: "ApiListViewController", bundle: nil)
+    }
+    
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -56,7 +61,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let apiInfo: ApiInfo = ApiListStrage.get()[indexPath.row]
-        let entryListVC = EntryListViewController(apiTitle: apiInfo.title, apiUrl: apiInfo.url)
+        let entryListVC = EntryListViewController(apiTitle: apiInfo.title!, apiUrl: apiInfo.url!)
         self.navigationController?.pushViewController(entryListVC, animated: true)
     }
     
