@@ -9,6 +9,10 @@
 import UIKit
 
 private let TITLE = "設定一覧"
+private let TITLE_HANDMAKE = "手入力"
+private let TITLE_SETTING = "設定API"
+private let SECTION_COUNT = 2
+private let SECTION_HANDMAKE = 0
 
 class SettingListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -29,7 +33,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section == SECTION_HANDMAKE {
             return 1
         } else {
             return SettingListStrage.get().count
@@ -42,8 +46,8 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
         let cell: UITableViewCell =
         UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
-        if indexPath.section == 0 {
-            cell.textLabel.text = "手入力"
+        if indexPath.section == SECTION_HANDMAKE {
+            cell.textLabel.text = TITLE_HANDMAKE
         } else {
             cell.textLabel.text = SettingListStrage.get()[indexPath.row].title
         }
@@ -53,7 +57,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 {
+        if indexPath.section == SECTION_HANDMAKE {
             self.navigationController?.pushViewController(ApiListViewController(), animated: true)
         } else {
             let setting: Setting = SettingListStrage.get()[indexPath.row]
@@ -63,16 +67,16 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     
     // ヘッダのタイトル
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "手入力"
+        if section == SECTION_HANDMAKE {
+            return TITLE_HANDMAKE
         } else {
-            return "設定API"
+            return TITLE_SETTING
         }
     }
     
     // セクションの数
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return SECTION_COUNT
     }
     
     // 追加ボタンをクリックした時の処理
