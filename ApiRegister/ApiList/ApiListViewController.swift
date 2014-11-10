@@ -17,11 +17,13 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override init() {
         super.init(nibName: "ApiListViewController", bundle: nil)
+        self.title = "手入力"
     }
     
-    init(url: String) {
+    init(title: String, url: String) {
         mSettingApiUrl = url
         super.init(nibName: "ApiListViewController", bundle: nil)
+        self.title = title
     }
     
     required init(coder aDecoder: NSCoder) {

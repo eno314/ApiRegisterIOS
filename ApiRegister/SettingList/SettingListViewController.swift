@@ -56,8 +56,8 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
         if indexPath.section == 0 {
             self.navigationController?.pushViewController(ApiListViewController(), animated: true)
         } else {
-            let url = SettingListStrage.get()[indexPath.row].url
-            self.navigationController?.pushViewController(ApiListViewController(url: url), animated: true)
+            let setting: Setting = SettingListStrage.get()[indexPath.row]
+            self.navigationController?.pushViewController(ApiListViewController(title: setting.title, url: setting.url), animated: true)
         }
     }
     
