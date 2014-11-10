@@ -13,6 +13,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet var tableView: UITableView!
     
     private var mSettingApiUrl: String?
+    private var mApiList: ApiList?
     
     override init() {
         super.init(nibName: "ApiListViewController", bundle: nil)
@@ -35,6 +36,8 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         if mSettingApiUrl == nil {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "＋", style: .Plain, target: self, action: "onClickAddButton:")
+        } else {
+            request()
         }
     }
 
@@ -44,7 +47,15 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ApiListStrage.get().count;
+        if mSettingApiUrl == nil {
+            return ApiListStrage.get().count;
+        }
+        
+        if mApiList == nil {
+            return 0
+        }
+        
+        return mApiList!.list!.count
     }
     
     // セルの内容を変更
@@ -53,14 +64,24 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell: UITableViewCell =
         UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
-        cell.textLabel.text = ApiListStrage.get()[indexPath.row].title
+        if mSettingApiUrl == nil {
+            cell.textLabel.text = ApiListStrage.get()[indexPath.row].title
+        } else {
+            cell.textLabel.text = mApiList!.list![indexPath.row].title
+        }
         
         return cell
     }
     
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let apiInfo: ApiInfo = ApiListStrage.get()[indexPath.row]
+        var apiInfo: ApiInfo
+        if mSettingApiUrl == nil {
+            apiInfo = ApiListStrage.get()[indexPath.row]
+        } else {
+            apiInfo = mApiList!.list![indexPath.row]
+        }
+        
         let entryListVC = EntryListViewController(apiTitle: apiInfo.title!, apiUrl: apiInfo.url!)
         self.navigationController?.pushViewController(entryListVC, animated: true)
     }
@@ -68,4 +89,28 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     func onClickAddButton(sender: UIButton) {
         println("AAAA")
     }
+    
+    // APIリクエスト
+    private func request() {
+        // startLoading()
+        println("start request")
+        let builder: ApiListRequest.Builder = ApiListRequest.Builder(url: mSettingApiUrl!)
+        builder.setOnReceiveApiList(onReceiveApiList)
+        builder.setOnRequestFaild(onRequestFaild)
+        builder.build().execute()
+    }
+    
+    // APIのパース結果を受け取った時のコールバック実装
+    private func onReceiveApiList(apiList: ApiList) {
+        // stopLoading()
+        mApiList = apiList
+        self.tableView.reloadData()
+    }
+    
+    // APIリクエストに失敗した時のコールバック実装
+    private func onRequestFaild() {
+        // stopLoading()
+        println("request failed...")
+    }
+
 }
