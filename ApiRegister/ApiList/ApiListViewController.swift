@@ -14,13 +14,16 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private var mSettingApiUrl: String?
     private var mApiList: ApiList?
+    private var mIsHandmake: Bool
     
     init(title: String) {
+        mIsHandmake = true
         super.init(nibName: "ApiListViewController", bundle: nil)
         self.title = title
     }
     
     init(title: String, url: String) {
+        mIsHandmake = false
         mSettingApiUrl = url
         super.init(nibName: "ApiListViewController", bundle: nil)
         self.title = title
@@ -36,7 +39,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        if mSettingApiUrl == nil {
+        if mIsHandmake {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "＋", style: .Plain, target: self, action: "onClickAddButton:")
         } else {
             request()
@@ -49,7 +52,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if mSettingApiUrl == nil {
+        if mIsHandmake {
             return ApiListStrage.get().count;
         }
         
@@ -66,7 +69,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell: UITableViewCell =
         UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
-        if mSettingApiUrl == nil {
+        if mIsHandmake {
             cell.textLabel.text = ApiListStrage.get()[indexPath.row].title
         } else {
             cell.textLabel.text = mApiList!.list![indexPath.row].title
@@ -78,7 +81,7 @@ class ApiListViewController: UIViewController, UITableViewDelegate, UITableViewD
     // セルタップ時
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var apiInfo: ApiInfo
-        if mSettingApiUrl == nil {
+        if mIsHandmake {
             apiInfo = ApiListStrage.get()[indexPath.row]
         } else {
             apiInfo = mApiList!.list![indexPath.row]
