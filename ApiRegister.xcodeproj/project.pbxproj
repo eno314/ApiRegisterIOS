@@ -36,6 +36,7 @@
 		9ED3FFC31A0F3695003391E9 /* ApiListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC11A0F3695003391E9 /* ApiListViewController.xib */; };
 		9ED3FFC51A111A04003391E9 /* ApiListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC41A111A04003391E9 /* ApiListParser.swift */; };
 		9ED3FFC71A111C9A003391E9 /* ApiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC61A111C9A003391E9 /* ApiList.swift */; };
+		9ED3FFC91A112939003391E9 /* ApiListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3FFC81A112939003391E9 /* ApiListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		9ED3FFC11A0F3695003391E9 /* ApiListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ApiListViewController.xib; path = ApiList/ApiListViewController.xib; sourceTree = "<group>"; };
 		9ED3FFC41A111A04003391E9 /* ApiListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListParser.swift; path = ApiList/ApiListParser.swift; sourceTree = "<group>"; };
 		9ED3FFC61A111C9A003391E9 /* ApiList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiList.swift; path = ApiList/ApiList.swift; sourceTree = "<group>"; };
+		9ED3FFC81A112939003391E9 /* ApiListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiListRequest.swift; path = ApiList/ApiListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				9ED3FFC11A0F3695003391E9 /* ApiListViewController.xib */,
 				9ED3FFC41A111A04003391E9 /* ApiListParser.swift */,
 				9ED3FFC61A111C9A003391E9 /* ApiList.swift */,
+				9ED3FFC81A112939003391E9 /* ApiListRequest.swift */,
 			);
 			name = ApiList;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				9E88C7AA1A05C9830072D813 /* EntryListParser.swift in Sources */,
 				9E938C331A0489BD00A507D3 /* AddApiDialogBuilder.swift in Sources */,
 				9ED3FFA81A09D245003391E9 /* WebViewController.swift in Sources */,
+				9ED3FFC91A112939003391E9 /* ApiListRequest.swift in Sources */,
 				9ED3FFC21A0F3695003391E9 /* ApiListViewController.swift in Sources */,
 				9ED3FFC71A111C9A003391E9 /* ApiList.swift in Sources */,
 				9E938C371A04AAAE00A507D3 /* ApiInfo.swift in Sources */,
