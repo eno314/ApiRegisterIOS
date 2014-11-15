@@ -18,10 +18,6 @@ class ApiListStrage: NSObject {
         var apiList:[String] = []
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        if let savedData = userDefaults.objectForKey(KEY) as? NSData {
-            var apiList = NSKeyedUnarchiver.unarchiveObjectWithData(savedData) as [String: String]
-        }
-        
         if let saved = userDefaults.objectForKey(KEY) as? [String] {
             apiList = saved
         }
